@@ -4,6 +4,7 @@ import pandas
 import requests
 import time
 from selenium import webdriver as wd
+from selenium.webdriver.support.ui import Select
 import chromedriver_binary
 
 url = 'https://www.nba.com/stats/teams/boxscores/?Season=2021-22&SeasonType=Regular%20Season'
@@ -15,7 +16,8 @@ driver.get(url)
 r = requests.get(url).text
 soup = BeautifulSoup(r, 'lxml')
 
-driver.find_element_by_xpath()
+# select = Select(driver.find_element_by_xpath())
+
 
 
 
