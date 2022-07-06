@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from bs4 import Comment
 import pandas
 import requests
 import time
@@ -12,12 +11,6 @@ url = 'https://www.nba.com/stats/teams/boxscores/?Season=2021-22&SeasonType=Regu
 
 driver = wd.Chrome()
 driver.get(url)
-
-# #load webpage
-# r = requests.get(url).text
-# soup = BeautifulSoup(r, 'lxml')
-
-# select = Select(driver.find_element_by_xpath())
 
 select = Select(driver.find_element(By.XPATH, "/html/body/main/div/div/div[2]/div/div/nba-stat-table/div[1]/div/div/select"))
 
@@ -43,3 +36,4 @@ for tr in table_rows:
     td = tr.find_all('td')
     row = [tr.text.strip() for tr in td]
     row_list.append(row)
+
