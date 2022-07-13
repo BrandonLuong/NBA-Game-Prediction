@@ -50,19 +50,3 @@ for tr in table_rows:
 
 df = pd.DataFrame(row_list, columns=headers_list)
 df.to_csv('games_stats.csv', mode='a', header=False)
-
-
-# start = 2021
-
-# url = 'https://www.nba.com/stats/teams/boxscores/?Season=' + str(start) + '-' + str(start - 2000 + 1) + '&SeasonType=Regular%20Season'
-# #     start -= 1
-
-# driver = wd.Chrome()
-# driver.get(url)
-
-# select = Select(driver.find_element(By.XPATH, "/html/body/main/div/div/div[2]/div/div/div[1]/div[1]/div/div/label/select"))
-
-# driver.implicitly_wait(1)
-# #select "All" option
-# select.select_by_index(3)
-# time.sleep(5)
